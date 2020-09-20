@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CV</title>
+    <meta charset="utf-8">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <img src="img/photo.jpg" alt="Photo" title="Photo">
+    <div class="contact-info">
+      <div class="contacts-block">
+        <h1 id="contacts">Yuriy Timashov</h1>
+        <hr>
+        <h3 id="contacts">Contact Info</h3>
+        <ul class="contact-list">
+          <li><strong>Email:&nbsp;</strong>timashov.yuriy@gmail.com</li>
+          <li><strong>Phone:&nbsp;</strong></strong>+375-29-154-28-80</li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h3 id="summary-block">Summary</h3>
+        <p>My goal is to deepen knowledge in the area of web-development. Also I'd like to gain experience of working in the team on a mutual project. 
+          I could call myself quick learner with analytical mindset and strong passion to learn something new.</p>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <section class="info-block">
+      <div class="contacts">
+        <h3 id="skills-block">Skills</h3>
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+          <li>git</li>
+          <li>CMS (wordpress, joomla, bitrix)</li>
+        </ul>
+      </div>
+    </section>
+    <section class="info-block">
+      <div class="contacts">
+        <h3 id="skills-block">Code Example</h3>
+        <pre class="code"><code>
+          // создание пустой матрицы
+          matrixColumns.addEventListener('input', e => {  
+            let insertedDemension = Number(e.target.value) + 1;
+            numbersOfCol = insertedDemension;
+          
+            // создание экземпляра класса "Матрица"
+            let matrix = new Matrix(insertedDemension);
+            matrixArray = matrix.makeEmptyMatrix();
+          });
+          
+          // отрисовка таблицы матрицы
+          startButton.addEventListener('click', function() {
+            // Проверка на тип вводимых данных
+            if (isNaN(numbersOfCol)) {
+              alert("Пожалуйста, введите численное значение!");
+              matrixColumns.value = "";
+              matrixColumns.innerHTML = "";
+              location.reload();
+            }
+          
+            // отрисовка таблицы через экземпляр класса "Таблица"
+            let table = new TableMatrix(matrixArray.length, matrixArray[0].length - 1);
+            table.makeTable();
+          
+            // Создаем кнопку "Решить матрицу"
+            let solveButton = document.createElement("INPUT");
+            solveButton.setAttribute("type", "button");
+            solveButton.setAttribute("value", "Решить систему уравнений");
+            solveButton.setAttribute("id", "solve-button");
+            let referenceNode = document.querySelector('#matrix-table');
+            referenceNode.after(solveButton);
+          }, {once: true});</code></pre>
+      </div>
+    </section>
+    <section class="info-block">
+      <div class="contacts">
+        <h3 id="skills-block">Education</h3>
+        <p>BSU - Business Administration (2013 - 2017)</p>
+        <p>BNTU - Information Technologies And Robotics Faculty (2018 - 2022)</p>
+      </div>
+    </section>
+    <section class="info-block">
+      <div class="contacts">
+        <h3 id="skills-block">English</h3>
+        <p>B1. I can freely read and understand English, but there are some difficulties in expression my own thoughts because of lack of practice. Currently I'm trying to make it better through visiting Ensligh Speaking courses.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
