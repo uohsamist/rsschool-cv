@@ -1,1 +1,0 @@
-https://uohsamist.github.io/rsschool-cv/cv
